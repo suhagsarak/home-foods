@@ -1,0 +1,41 @@
+<div style="text-align: center; margin-top: 100px;">
+
+    <div style="">
+        <input type="file" name="client-file" id="get-files" multiple />
+        <input value="Read" type="button" onclick="read()" />
+    </div>
+
+    <div style="margin-top: 100px;">
+        <input type="textarea" value="Hello World"
+            id="myInput">
+        <button onclick="myFunction()">Copy text</button>
+    </div>
+</div>
+
+
+<script>
+    function read() {
+        const fileNames = [];
+        const inp = document.getElementById("get-files");
+        for (i = 0; i < inp.files.length; i++) {
+            let file = inp.files[i];
+            fileNames.push(
+            {
+                name: file.name,
+                price: Math.round((Math.random() * (250 - 100) + 100) * 1) / 1
+                // price: Math.round((Math.random() * (max - min) + min) * round) / round;
+
+            }    
+            );
+        }
+        document.getElementById('myInput').value = JSON.stringify(fileNames);
+        // console.log();
+    }
+    function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+    }
+</script>

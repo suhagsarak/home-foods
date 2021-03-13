@@ -1,0 +1,112 @@
+body {
+    font-family: cursive;
+    padding: 30px;
+    /* width: 1500px; */
+    text-align: center;
+    background-color: #f7f2df;
+}
+.proj-title {
+    margin: auto;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: #f7f2df;
+}
+
+.navbar-nav {
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-nav a {
+    color: green;
+}
+
+.navbar-brand {
+    color: green;
+}
+
+.navbar-nav li {
+    margin-right: 5px;
+}
+
+.back-drop {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: honeydew;
+    border-radius: 50px;
+}
+
+.t-c {
+    text-align: center;
+}
+
+.w-1280 {
+    width: 1280px;
+}
+
+.ro-b {
+    border-radius: 30px;
+}
+
+.food-list {
+    display: inline-block;
+    width: 40%;
+}
+
+.food-item-con {
+    margin: 30px;
+    /* display: flex;
+    flex-direction: row; */
+}
+.food-image-con {
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+.food-image {
+    border-radius: 10px;
+    object-fit: fill;
+    height: 300px;
+    width: 300px;
+}
+.food-details {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.food-name {
+}
+.food-price {
+}
+.food-price .order-now {
+}
+.food-price .price {
+}
+
+.progress {
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+.progress-bar {
+    background-color: greenyellow;
+    text-align: left;
+    justify-content: normal;
+    border-radius: 50px;
+}
+.rating-desc .col-md-3 {
+    padding-right: 0px;
+}
+.sr-only {
+    color: indianred;
+    font-size: 13px;
+    margin-left: 10px;
+    overflow: visible;
+    clip: auto;
+}
