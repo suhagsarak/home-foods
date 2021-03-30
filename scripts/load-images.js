@@ -1,10 +1,10 @@
 function loadImages(folderName) {
     let pName;
-    for (const food of foods) {
+    for (let food of foods) {
         pName = getItemName(food.name);
         rating = getRating();
         ratPerc = (rating / 5) * 100;
-        const eles = `
+        let eles = `
         <div class="food-list">
             <div class="food-item-con">
                 <div class="food-image-con">
@@ -39,7 +39,7 @@ function getItemName(imageName) {
 }
 
 function getRating() {
-    const min = 4;
-    const max = 5;
+    let min = 4;
+    let max = 5;
     return Math.round((Math.random() * (max - min) + min) * 10) / 10;
 }
