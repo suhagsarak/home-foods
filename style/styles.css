@@ -110,3 +110,12 @@ body {
     overflow: visible;
     clip: auto;
 }
+
+.contact-about-us {
+    background-color: aliceblue;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px;
+  }
