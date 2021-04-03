@@ -118,4 +118,18 @@ body {
     height: 350px;
     border-radius: 30px;
     box-shadow: 0 0 10px;
-  }
+}
+
+.login-form {
+    margin: auto;
+    background-color: azure;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.t-l {
+    text-align: left;
+}
+.c-p {
+    cursor: pointer;
+}

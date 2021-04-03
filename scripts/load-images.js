@@ -15,7 +15,7 @@ function loadImages(folderName) {
                         <span>${pName}</span>
                     </div>
                     <div class="food-price">
-                        <span class="order-now"> Order Now </span>
+                        <span class="order-now c-p" onclick='addToCart(${JSON.stringify(folderName)}, ${JSON.stringify(food)})'> Order Now </span>
                         <span class="price">${food.price}/-</span>
                     </div>
                     <div>
