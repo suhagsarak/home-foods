@@ -36,3 +36,7 @@ function validate() {
         }
     }
 }
+
+function logout() {
+    localStorage.removeItem('username');
+}

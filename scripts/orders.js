@@ -44,7 +44,20 @@ function addToCart(product) {
 }
 
 function checkOut() {
-    alert('Thanks')
+
+    let total = 0;
+    userOrders.forEach(element => {
+        total = total + element.price;
+    });
+
+    localStorage.setItem('total', total);
+
+    userOrders = [];
+    orders[username] = userOrders;
+    saveOrders();
+
+
+    window.location.href = "buythanks.html";
 }
 
 function loadOrders() {
