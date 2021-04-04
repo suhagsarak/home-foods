@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="" href="style/styles.css">
     <link rel="shortcut icon" href="image/lunch-box.png">
     <script>var $;</script>
-    <script src="scripts/load-images.js"></script>
     <script src="scripts/orders.js"></script>
+    <script src="scripts/load-images.js"></script>
 </head>
 
 <body class="w-1280">
@@ -41,15 +41,24 @@
             <li class="back-drop"><a href="contact.html">Contact Us</a></li>
             <li class="back-drop"><a href="about.html">About Us</a></li>
             <li class="back-drop"><a href="register.html">Register Here</a></li>
-            <li class="back-drop"><a href="login.html">Log In</a></li>
+            <li class="back-drop"><a href="orders.html">Orders</a></li>
+            <li class="back-drop" class="login-btn"><a href="login.html">Log In</a></li>
         </ul>
     </nav>
     <!--  -->
 
     <span id="appendHere"></span>
     <script>
-        var foods = [{ name: "kolhapuri-thali.jpg", price: 40 }, { name: "aamrakhand.jpg", price: 40 }, { name: "shrikhand1.jpg", price: 40 }, { name: "modak.jpg", price: 40 }, { name: "sol-kadhi.jpg", price: 40 }, { name: "sabudana-khichdi.jpg", price: 40 }, { name: "tambda-rassa.jpg", price: 40 }, { name: "pandhara-rassa.jpg", price: 40 }, { name: "pithale.jpg", price: 40 }, { name: "thalipeeth.jpg", price: 40 }, { name: "pav-bhaji.jpg", price: 40 }, { name: "misal-pav1.jpg", price: 40 }, { name: "kotmir-vadi.jpg", price: 40 }, { name: "bhakarwadi.jpg", price: 40 }, { name: "sabudana-vada.jpg", price: 40 }, { name: "alu-vadi.jpg", price: 40 }, { name: "shakarpara.jpg", price: 40 }, { name: "vada-pav.jpg", price: 40 }, { name: "shrikhand.jpg", price: 40 }, { name: "puran-poli.jpg", price: 40 }, { name: "tambda-pandhra-rassa.jpg", price: 40 }, { name: "aamti.jpg", price: 40 }, { name: "vada-pav1.jpg", price: 40 }, { name: "bharli-vangi.jpg", price: 40 }, { name: "sabudana-khichdi1.jpg", price: 40 }, { name: "pithla-bhakri.jpg", price: 40 }, { name: "misal-pav.jpg", price: 40 }, { name: "pohe.jpg", price: 40 }];
         loadImages('maharashtra');
+
+
+        $(document).ready(() => {
+
+            if (localStorage.getItem('username')) {
+                console.log($('.login-btn'));
+            }
+        });
+
     </script>
 
     <!--  -->

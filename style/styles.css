@@ -133,3 +133,48 @@ body {
 .c-p {
     cursor: pointer;
 }
+
+/* orders */
+
+.order-list {
+    /* display: flex; */
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    width: 100%;
+    background-color: lavender;
+}
+
+.order-item-con {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+.order-image-con {
+    border-radius: 3px;
+    /* display: inline-block; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+.order-image {
+    border-radius: 3px;
+    object-fit: fill;
+    height: 100px;
+    width: 100px;
+}
+.order-details {
+    margin-left: 30px;
+    /* display: inline-block; */
+    /* flex-direction: column; */
+}
+.food-name {
+}
+.food-price {
+}
+.food-price .order-now {
+}
+.food-price .price {
+}

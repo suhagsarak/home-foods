@@ -1,3 +1,6 @@
+if (localStorage.getItem('username') && window.location.href.indexOf('login.html') != -1) {
+    window.location = "index.html";
+}
 
 var creds = [
     { u: 'seema', p: 'seema' },

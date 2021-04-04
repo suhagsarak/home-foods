@@ -38,51 +38,33 @@ function initialiseUserOrders() {
 
 initialiseUserOrders();
 
-function addToCart(category, product) {
+function addToCart(product) {
     userOrders.push(product);
     saveOrders();
 }
 
-function loadOrders() {
-
-
-
-    // getOrders();
-    // userOrders = orders[username];
-
-    loadImages('maharashtra');
-    
+function checkOut() {
+    alert('Thanks')
 }
 
-loadOrders();
-
-function loadImages(folderName) {
+function loadOrders() {
     let pName;
     for (let food of userOrders) {
         pName = getItemName(food.name);
         rating = getRating();
         ratPerc = (rating / 5) * 100;
         let eles = `
-        <div class="food-list">
-            <div class="food-item-con">
-                <div class="food-image-con">
-                    <img class="food-image" src="image/${folderName}/${food.name}" />
+        <div class="order-list">
+            <div class="order-item-con">
+                <div class="order-image-con">
+                    <img class="order-image" src="image/${food.category}/${food.name}" />
                 </div>
-                <div class="food-details">
-                    <div class="food-name">
+                <div class="order-details">
+                    <div class="order-name">
                         <span>${pName}</span>
                     </div>
-                    <div class="food-price">
-                        <span class="order-now c-p" onclick='addToCart(${JSON.stringify(folderName)}, ${JSON.stringify(food)})'> Order Now </span>
-                        <span class="price">${food.price}/-</span>
-                    </div>
-                    <div>
-                        <div class="progress progress-striped">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                                aria-valuemin="0" aria-valuemax="100" style="width: ${ratPerc}%">
-                                <span class="sr-only">Rating ${rating}</span>
-                            </div>
-                        </div>
+                    <div class="order-price">
+                        <span class="price">${food.price}</span>
                     </div>
                 </div>
             </div>
@@ -90,6 +72,10 @@ function loadImages(folderName) {
         `;
         $('#loadOrdersHere').append(eles);
     }
+}
+
+if (window.location.href.indexOf('orders.html') != -1) {
+    loadOrders();
 }
 
 function getItemName(imageName) {
