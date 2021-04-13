@@ -8,8 +8,10 @@
     <script src="./assests/bootstrap.min.js"></script>
     <link rel="stylesheet" type="" href="style/styles.css">
     <link rel="shortcut icon" href="image/lunch-box.png">
-    <!-- <script src="./scripts/orders.js"></script> -->
     <script>var $;</script>
+    <script src="scripts/is-user-logged-in.js"></script>
+    <script src="scripts/logout.js"></script>
+    <script src="scripts/commanjs.js"></script>
 </head>
 
 <body class="w-1280">
@@ -34,15 +36,15 @@
             <li class="back-drop">
                 <a href="sindhi.html">Sindhi</a>
             </li>
-            <!-- <li class="back-drop"><a href="brands.html">Categories</a></li> -->
         </ul>
         <ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
             <li class="back-drop"><a href="contact.html">Contact Us</a></li>
             <li class="back-drop"><a href="about.html">About Us</a></li>
-            <li class="back-drop"><a href="register.html">Register Here</a></li>
-            <li class="back-drop"><a href="orders.html">Orders</a></li>
-            <li class="back-drop" class="login-btn"><a href="login.html">Log In</a></li>
-            <li class="back-drop" class="login-btn" onclick="logout()"><a href="login.html">Log Out</a></li>
+            <li class="back-drop" id="registerele"><a href="register.html">Register Here</a></li>
+            <li class="back-drop" id="ordersele"><a href="orders.html">Orders</a></li>
+            <li class="back-drop" id='loginele' class="login-btn"><a href="login.html">Log In</a></li>
+            <li class="back-drop" id='logoutele' class="login-btn" onclick="logout()"><a href="login.html">Log Out</a>
+            </li>
         </ul>
     </nav>
 
@@ -103,6 +105,19 @@
         <input class="ro-b" type="image" class="w-99" src="image/thecha.png" alt="Submit" title="Eat marathi food!" />
     </form>
     <script src="scripts/slider.js"> </script>
+    <script>
+        if (isUserLoggedIn()) {
+            hideElement('registerele');
+            hideElement('loginele');
+            showElement('ordersele');
+            showElement('logoutele');
+        } else {
+            showElement('registerele');
+            showElement('loginele');
+            hideElement('ordersele');
+            hideElement('logoutele');
+        }
+    </script>
     <div class="fix">
         <footer>
             <p>&copy; 2021 homefoods.com</p>

@@ -10,8 +10,10 @@ var creds = [
     { u: 'tanvi', p: 'tanvi' },
     { u: 'rohit', p: 'rohit' },
 ];
+
 var maxTry = 3;
-function validate() {
+
+function login() {
     const cred = { u: '', p: '' };
     cred.u = document.getElementById("username").value;
     cred.p = document.getElementById("password").value;
@@ -35,8 +37,4 @@ function validate() {
             return false;
         }
     }
-}
-
-function logout() {
-    localStorage.removeItem('username');
 }

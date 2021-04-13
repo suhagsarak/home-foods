@@ -178,3 +178,10 @@ body {
 }
 .food-price .price {
 }
+
+.hide {
+    display: none;
+ }
+ .show {
+     display: inline;
+ }

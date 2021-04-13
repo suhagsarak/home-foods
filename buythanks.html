@@ -9,9 +9,9 @@
 	<link rel="stylesheet" type="" href="style/styles.css">
 	<link rel="shortcut icon" href="image/lunch-box.png">
 	<script>var $;</script>
+	<script src="scripts/check-login.js"></script>
+	<script src="scripts/logout.js"></script>
 	<script src="scripts/orders.js"></script>
-	<script src="scripts/login.js"></script>
-	<!-- <script src="scripts/load-images.js"></script> -->
 </head>
 
 <body class="w-1280">
@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<a class="navbar-brand back-drop" href="index.html">Home Foods</a>
 		<ul class="nav navbar-nav">
-			<!-- <li class="back-drop">
+			<li class="back-drop">
 				<a href="marathi.html">Marathi</a>
 			</li>
 			<li class="back-drop">
@@ -35,42 +35,68 @@
 			</li>
 			<li class="back-drop">
 				<a href="sindhi.html">Sindhi</a>
-			</li> -->
-			<!-- <li class="back-drop"><a href="brands.html">Categories</a></li> -->
+			</li>
 		</ul>
 		<ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
 			<li class="back-drop"><a href="contact.html">Contact Us</a></li>
 			<li class="back-drop"><a href="about.html">About Us</a></li>
-			<li class="back-drop"><a href="register.html">Register Here</a></li>
 			<li class="back-drop"><a href="orders.html">Orders</a></li>
-			<li class="back-drop" class="login-btn"><a href="login.html">Log In</a></li>
-			<li class="back-drop" class="login-btn" onclick="logout()"><a href="login.html">Log Out</a></li>
+			<li class="back-drop" class="login-btn" onclick="logout()"> <a href="#">Log Out</a></li>
 		</ul>
 	</nav>
 	<!--  -->
 
 	<div class="hope">
-		<h1>
-			Thanks For Buying Our Food. <br>
-			<marquee WIDTH=450 BEHAVIOR=ALTERNATE> We Hope To See You Again!! </marquee> </br>
-		</h1>
+		<h1>Your Order</h1>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="t-l">
+					<span id="loadOrdersHere"></span>
+				</div>
+			</div>
+		</div>
 		<h5>
 			Please pay Rs. <span id='total'></span> to our delivery representative.
 		</h5>
-		<h2>Click Here To Eat More! </h2>
-		<a href="index.html" class="button">Eat More</a>
-
-		<h3> Click Here To Return Back </h3>
-		<a href="index.html" class="button">Return Back</a>
+		<a href="index.html" class="button">
+			<h2>Click Here To Eat More! </h2>
+		</a>
+		<br>
+		<br>
+		<br>
+		<h6> Can you please give us your valuable Feedback </h6>
+		<a href="feedback.html" class="button text-warning">
+			<h1>Feedback</h1>
+		</a>
+		<h1>
+			Thanks For Buying Our Food. <br>
+			<marquee WIDTH=600 BEHAVIOR=ALTERNATE>
+				We Hope To See You Again!!
+			</marquee> </br>
+		</h1>
 	</div>
 
 	<script>
-		var total = localStorage.getItem('total', total);
-		document.getElementById('total').innerHTML = total;
+		// var total = localStorage.getItem('total', total);
+
+		loadOrdersInThanks();
+
+		let total = 0;
+		userOrders.forEach(element => {
+			total = total + element.price;
+		});
+
+		// userOrders = [];
+		// orders[username] = userOrders;
+		// saveOrders();
+
 		console.log(total);
-		setTimeout(() => {
-			window.alert("Thank You For Shopping. Your Items Will Be Shipped With In half hour!");
-		}, 200);
+
+		document.getElementById('total').innerHTML = total;
+		// setTimeout(() => {
+		// 	window.alert("Thank You For Shopping. Your Items Will Be Shipped With In half hour!");
+		// }, 200);
 	</script>
 
 	<!--  -->

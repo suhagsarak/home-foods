@@ -6,10 +6,6 @@ var username = local.getItem('username');
 var userOrders;
 var category;
 
-if (!username) {
-    window.location = 'login.html';
-}
-
 function saveOrders() {
     local.setItem('orders', JSON.stringify(orders));
 }
@@ -35,9 +31,9 @@ function initialiseUserOrders() {
         saveOrders();
     }
 }
-
-initialiseUserOrders();
-
+if (username) {
+    initialiseUserOrders();
+}
 function addToCart(product) {
     userOrders.push(product);
     saveOrders();
@@ -45,16 +41,16 @@ function addToCart(product) {
 
 function checkOut() {
 
-    let total = 0;
-    userOrders.forEach(element => {
-        total = total + element.price;
-    });
+    // let total = 0;
+    // userOrders.forEach(element => {
+    //     total = total + element.price;
+    // });
 
-    localStorage.setItem('total', total);
+    // localStorage.setItem('total', total);
 
-    userOrders = [];
-    orders[username] = userOrders;
-    saveOrders();
+    // userOrders = [];
+    // orders[username] = userOrders;
+    // saveOrders();
 
 
     window.location.href = "buythanks.html";
@@ -83,12 +79,40 @@ function loadOrders() {
             </div>
         </div>
         `;
+        console.log(eles);
         $('#loadOrdersHere').append(eles);
     }
 }
 
 if (window.location.href.indexOf('orders.html') != -1) {
     loadOrders();
+}
+
+function loadOrdersInThanks() {
+    let pName;
+    for (let food of userOrders) {
+        pName = getItemName(food.name);
+        rating = getRating();
+        ratPerc = (rating / 5) * 100;
+        let eles = `
+        <div class="order-list">
+            <div class="order-item-con">
+                <div class="order-image-con">
+                    <img class="order-image" src="image/${food.category}/${food.name}" />
+                </div>
+                <div class="order-details">
+                    <div class="order-name">
+                        <span>${pName}</span>
+                    </div>
+                    <div class="order-price">
+                        <span class="price">${food.price}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        $('#loadOrdersHere').append(eles);
+    }
 }
 
 function getItemName(imageName) {
