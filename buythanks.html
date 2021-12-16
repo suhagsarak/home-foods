@@ -1,20 +1,110 @@
-<HTML>
+<html>
+
 <head>
-    <title> Psports </title>
-	<link href="styles/site12.css" type="text/css" rel="stylesheet" />
-	<link rel="shortcut icon" href="images/psportslogo.png">
-	<body>
-	<div class="hope">
-	<h1> Thanks For Buying Our Products. <br> <marquee WIDTH=450  BEHAVIOR=ALTERNATE> We Hope To See You Again!!  </marquee> </br> </h1>
-	</body>
-	<h2>Click Here To Shop More! </h2>
-	<a href="brands.html" class="button">Shop More</a>
-	
-	<h3> Click Here To Return Back </h3>
-	<a href="clothing.html" class="button">Return Back</a>
+	<title> Home Foods Marathi</title>
+	<link rel="stylesheet" type="" href="./assests/bootstrap.min.css">
+	<link rel="stylesheet" type="" href="./assests/font-awesome.min.css">
+	<script src="./assests/jquery-3.6.0.min.js"></script>
+	<script src="./assests/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="" href="style/styles.css">
+	<link rel="shortcut icon" href="image/lunch-box.png">
+	<script>var $;</script>
+	<script src="scripts/check-login.js"></script>
+	<script src="scripts/logout.js"></script>
+	<script src="scripts/orders.js"></script>
+</head>
+
+<body class="w-1280">
+	<div class="container">
+		<a class="navbar-brand proj-title" href="#">Home Food Best Food</a>
 	</div>
-	
-	
-	<script src="scripts/buythanks.js"> </script>
-	</head>
-	</HTML>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<a class="navbar-brand back-drop" href="index.html">Home Foods</a>
+		<ul class="nav navbar-nav">
+			<li class="back-drop">
+				<a href="marathi.html">Marathi</a>
+			</li>
+			<li class="back-drop">
+				<a href="punjabi.html">Punjabi</a>
+			</li>
+			<li class="back-drop">
+				<a href="south.html">South</a>
+			</li>
+			<li class="back-drop">
+				<a href="north.html">North Indian</a>
+			</li>
+			<li class="back-drop">
+				<a href="sindhi.html">Sindhi</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
+			<li class="back-drop"><a href="contact.html">Contact Us</a></li>
+			<li class="back-drop"><a href="about.html">About Us</a></li>
+			<li class="back-drop"><a href="orders.html">Orders</a></li>
+			<li class="back-drop" class="login-btn" onclick="logout()"> <a href="#">Log Out</a></li>
+		</ul>
+	</nav>
+	<!--  -->
+
+	<div class="hope">
+		<h1>Your Order</h1>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="t-l">
+					<span id="loadOrdersHere"></span>
+				</div>
+			</div>
+		</div>
+		<h5>
+			Please pay Rs. <span id='total'></span> to our delivery representative.
+		</h5>
+		<a href="index.html" class="button">
+			<h2>Click Here To Eat More! </h2>
+		</a>
+		<br>
+		<br>
+		<br>
+		<h6> Can you please give us your valuable Feedback </h6>
+		<a href="feedback.html" class="button text-warning">
+			<h1>Feedback</h1>
+		</a>
+		<h1>
+			Thanks For Buying Our Food. <br>
+			<marquee WIDTH=600 BEHAVIOR=ALTERNATE>
+				We Hope To See You Again!!
+			</marquee> </br>
+		</h1>
+	</div>
+
+	<script>
+		// var total = localStorage.getItem('total', total);
+
+		loadOrdersInThanks();
+
+		let total = 0;
+		userOrders.forEach(element => {
+			total = total + element.price;
+		});
+
+		// userOrders = [];
+		// orders[username] = userOrders;
+		// saveOrders();
+
+		console.log(total);
+
+		document.getElementById('total').innerHTML = total;
+		// setTimeout(() => {
+		// 	window.alert("Thank You For Shopping. Your Items Will Be Shipped With In half hour!");
+		// }, 200);
+	</script>
+
+	<!--  -->
+	<div class="fix">
+		<footer>
+			<p>&copy; 2021 homefoods.com </p>
+		</footer>
+	</div>
+</body>
+
+</html>

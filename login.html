@@ -1,23 +1,59 @@
 <html>
+
 <head>
-    <title> Psports LogIn </title>
-	<link href="styles/site9.css" type="text/css" rel="stylesheet" />
-	<link rel="shortcut icon" href="images/psportslogo.png">
-	<body>
+    <title> Home Foods Marathi</title>
+    <link rel="stylesheet" type="" href="./assests/bootstrap.min.css">
+    <link rel="stylesheet" type="" href="./assests/font-awesome.min.css">
+    <script src="./assests/jquery-3.6.0.min.js"></script>
+    <script src="./assests/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="" href="style/styles.css">
+    <link rel="shortcut icon" href="image/lunch-box.png">
+    <script>var $;</script>
+	<script src="scripts/login.js"></script>
+</head>
 
-	</body>
-	<div class="login0">
-	<p> Enter Your Username And Password Below </p>
-</div>
-
-<form id="form_id" method="post" name="myform">
-  <input type="text" id="username" placeholder="Username" required>
-  <input type="password" id="password" placeholder="Password" required>
-  <input type="button" id="submit" value="LOGIN" onclick="validate()">
-  <a href="forgotpassword.html" class="button111" >Forgot Password?</a>
-  <font color="red" size="4em"><label id="error"></label></font>
-</form>
-
-<script src="scripts/login.js"> </script>
+<body class="w-1280">
+    <div class="container">
+        <a class="navbar-brand proj-title" href="#">Home Food Best Food</a>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand back-drop" href="index.html">Home Foods</a>
+        <ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
+            <li class="back-drop"><a href="contact.html">Contact Us</a></li>
+            <li class="back-drop"><a href="about.html">About Us</a></li>
+            <li class="back-drop"><a href="register.html">Register Here</a></li>
+        </ul>
+    </nav>
+    <!--  -->
+    <h1>Login</h1>
+    <div class="col-md-4"></div>
+    <div class="t-l login-form col-md-4">
+        <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Username:</label>
+            <div class="col-sm-10">
+                <input type="text" name="" id="username" class="form-control" value="" required="required" title="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input" class="col-sm-2 control-label">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" name="" id="password" class="form-control" required="required" title="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" id="submit" onclick="login()" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+        <font color="red" size="4em"><label id="error"></label></font>
+    </div>
+    <script src="./scripts/login.js"></script>
+    <!--  -->
+    <div class="fix">
+        <footer>
+            <p>&copy; 2021 homefoods.com </p>
+        </footer>
+    </div>
+</body>
 
 </html>

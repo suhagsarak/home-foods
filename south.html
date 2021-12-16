@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="" href="style/styles.css">
     <link rel="shortcut icon" href="image/lunch-box.png">
     <script>var $;</script>
+    <script src="scripts/check-login.js"></script>
+    <script src="scripts/orders.js"></script>
     <script src="scripts/load-images.js"></script>
 </head>
 
@@ -29,7 +31,7 @@
                 <a href="south.html">South</a>
             </li>
             <li class="back-drop">
-                <a href="north.html">North Indidan</a>
+                <a href="north.html">North Indian</a>
             </li>
             <li class="back-drop">
                 <a href="sindhi.html">Sindhi</a>
@@ -38,16 +40,15 @@
         </ul>
         <ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
             <li class="back-drop"><a href="contact.html">Contact Us</a></li>
-            <li class="back-drop"><a href="about.html">About</a></li>
-            <li class="back-drop"><a href="register.html">Register Here</a></li>
-            <li class="back-drop"><a href="login.html">Log In</a></li>
+            <li class="back-drop"><a href="about.html">About Us</a></li>
+            <li class="back-drop"><a href="orders.html">Orders</a></li>
+			<li class="back-drop" class="login-btn" onclick="logout()"><a href="login.html">Log Out</a></li>
         </ul>
     </nav>
     <!--  -->
 
     <span id="appendHere"></span>
     <script>
-        var foods = [{"name":"masala-dosa.jpg","price":179},{"name":"idli.jpeg","price":167},{"name":"mysore-pak.jpg","price":178},{"name":"palkova.jpg","price":114},{"name":"thengai-paal-payasam.jpg","price":223},{"name":"holige.jpg","price":183},{"name":"akki-roti.jpg","price":203},{"name":"royyala-kura.jpg","price":160},{"name":"sarva-pindi.jpg","price":172},{"name":"talakaya-kura.jpg","price":230},{"name":"avial.jpg","price":108},{"name":"hyderabadi-biryani.jpg","price":133},{"name":"kootu.jpg","price":126},{"name":"ayila-porichathu.jpg","price":220},{"name":"uttapam.jpg","price":209},{"name":"chicken-chettinad.jpg","price":208},{"name":"olan.jpg","price":214},{"name":"ragi-mudde-soppu-saaru.jpg","price":163},{"name":"coorg-pandi-curry.jpg","price":204},{"name":"kotte-kadubu.jpg","price":205},{"name":"gongura-mamsam.jpg","price":145},{"name":"dosa.jpeg","price":127},{"name":"hyderabadi-chicken-biryani.jpg","price":248},{"name":"bisi-bele-bath.jpg","price":171},{"name":"koottu-curry.jpg","price":187},{"name":"pongal.jpg","price":236},{"name":"brand1so.jpg","price":193}];
         loadImages('south');
     </script>
 
