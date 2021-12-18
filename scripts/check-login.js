@@ -1,5 +1,5 @@
 
 
-if (!localStorage.getItem('username')) {
+if (!localStorage.getItem('email')) {
     window.location = 'login.html';
 }

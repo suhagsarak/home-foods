@@ -60,7 +60,7 @@
 			Please pay Rs. <span id='total'></span> to our delivery representative.
 		</h5>
 		<a href="index.html" class="button">
-			<h2>Click Here To Eat More! </h2>
+			<h2 onclick="clearOrders()">Click Here To Eat More! </h2>
 		</a>
 		<br>
 		<br>
@@ -86,12 +86,6 @@
 		userOrders.forEach(element => {
 			total = total + element.price;
 		});
-
-		// userOrders = [];
-		// orders[username] = userOrders;
-		// saveOrders();
-
-		console.log(total);
 
 		document.getElementById('total').innerHTML = total;
 		// setTimeout(() => {

@@ -1,4 +1,4 @@
 
 function isUserLoggedIn() {
-    return !!(localStorage.getItem('username'));
+    return !!(localStorage.getItem('email'));
 }

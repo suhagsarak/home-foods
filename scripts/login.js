@@ -2,7 +2,7 @@ if (localStorage.getItem('email') && window.location.href.indexOf('login.html') 
     window.location = "index.html";
 }
 
-let maxTry = 3;
+var maxTry = 3;
 
 function login() {
     const userCred = {

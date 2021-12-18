@@ -2,7 +2,7 @@
 
 var local = localStorage;
 var orders;
-var username = local.getItem('username');
+var email = local.getItem('email');
 var userOrders;
 var category;
 
@@ -25,13 +25,13 @@ function initialiseOrders() {
 initialiseOrders();
 
 function initialiseUserOrders() {
-    userOrders = orders[username];
+    userOrders = orders[email];
     if (!userOrders) {
-        orders[username] = [];
+        orders[email] = [];
         saveOrders();
     }
 }
-if (username) {
+if (email) {
     initialiseUserOrders();
 }
 function addToCart(product) {
@@ -49,7 +49,7 @@ function checkOut() {
     // localStorage.setItem('total', total);
 
     // userOrders = [];
-    // orders[username] = userOrders;
+    // orders[email] = userOrders;
     // saveOrders();
 
 
@@ -113,6 +113,13 @@ function loadOrdersInThanks() {
         `;
         $('#loadOrdersHere').append(eles);
     }
+}
+
+// call only from buythanks page
+function clearOrders() {
+    userOrders = [];
+    orders[email] = userOrders;
+    saveOrders();
 }
 
 function getItemName(imageName) {
