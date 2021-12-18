@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="" href="style/styles.css">
     <link rel="shortcut icon" href="image/lunch-box.png">
     <script>var $;</script>
-	<script src="scripts/login.js"></script>
+    <script src="scripts/login.js"></script>
 </head>
 
 <body class="w-1280">
@@ -28,24 +28,28 @@
     <h1>Login</h1>
     <div class="col-md-4"></div>
     <div class="t-l login-form col-md-4">
-        <div class="form-group">
-            <label for="input" class="col-sm-2 control-label">Username:</label>
-            <div class="col-sm-10">
-                <input type="text" name="" id="username" class="form-control" value="" required="required" title="">
+        <form action="javascript:void(0);">
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" id="email" class="form-control" value="" required="required"
+                        title="Email">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="input" class="col-sm-2 control-label">Password:</label>
-            <div class="col-sm-10">
-                <input type="password" name="" id="password" class="form-control" required="required" title="">
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" name="password" id="password" class="form-control" required="required"
+                        title="Password">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-10 col-sm-offset-2">
-                <button type="submit" id="submit" onclick="login()" class="btn btn-primary">Login</button>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button type="submit" id="submit" onclick="login()" class="btn btn-primary">Login</button>
+                </div>
             </div>
-        </div>
-        <font color="red" size="4em"><label id="error"></label></font>
+            <font color="red" size="4em"><label id="error"></label></font>
+        </form>
     </div>
     <script src="./scripts/login.js"></script>
     <!--  -->
