@@ -23,8 +23,12 @@ function login() {
                         // document.getElementById("error").innerHTML = "Log in sucessfull";
                         localStorage.setItem('email', data[0].email);
                         localStorage.setItem('type', data[0].type);
-                        window.location = "index.html";
-                        window.location = "index.html";
+
+                        if (data[0].type === 'Owner') {
+                            window.location = "owner-orders.html";
+                        } else {
+                            window.location = "index.html";
+                        }
                         return false;
                     } else {
                         maxTry--;

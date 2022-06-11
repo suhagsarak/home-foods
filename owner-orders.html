@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title> Home Foods Marathi</title>
+    <link rel="stylesheet" type="" href="./assests/bootstrap.min.css">
+    <link rel="stylesheet" type="" href="./assests/font-awesome.min.css">
+    <script src="./assests/jquery-3.6.0.min.js"></script>
+    <script src="./assests/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="" href="style/styles.css">
+    <link rel="shortcut icon" href="image/lunch-box.png">
+    <script>var $;</script>
+    <script src="scripts/check-login.js"></script>
+    <style>
+        .owner-order-list {}
+
+        .owner-order-item-con {
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 16px;
+            min-height: 35px;
+            background-color: azure;
+        }
+
+        .header {
+            padding: 10px;
+        }
+
+        .field {
+            padding: 10px;
+        }
+
+        .owner-order-oid {
+            width: 10%;
+        }
+
+        .owner-order-status {
+            width: 20%;
+        }
+
+        .owner-order-time {
+            width: 20%;
+        }
+
+        .owner-order-totalprice {
+            width: 20%;
+        }
+
+        .owner-order-user {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body class="w-1280">
+    <div class="container">
+        <a class="navbar-brand proj-title" href="#">Home Food Best Food</a>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand back-drop" href="index.html">Home Foods</a>
+        <!-- <ul class="nav navbar-nav">
+            <li class="back-drop">
+                <a href="marathi.html">Marathi</a>
+            </li>
+            <li class="back-drop">
+                <a href="punjabi.html">Punjabi</a>
+            </li>
+            <li class="back-drop">
+                <a href="south.html">South</a>
+            </li>
+            <li class="back-drop">
+                <a href="north.html">North Indian</a>
+            </li>
+            <li class="back-drop">
+                <a href="sindhi.html">Sindhi</a>
+            </li>
+        </ul> -->
+        <ul class="nav navbar-nav" style="margin-right: 0%; float: right;">
+            <!-- <li class="back-drop"><a href="contact.html">Contact Us</a></li>
+            <li class="back-drop"><a href="about.html">About Us</a></li>
+            <li class="back-drop"><a href="orders.html">Orders</a></li> -->
+            <li class="back-drop" class="login-btn" onclick="logout()">Log Out</li>
+        </ul>
+    </nav>
+    <!--  -->
+
+    <h3>All Orders</h3>
+
+    <div class="row">
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-12">
+            <div class="t-l">
+                <div class="owner-order-list">
+                    <div class="owner-order-item-con">
+                        <div class="header owner-order-oid">Order ID</div>
+                        <div class="header owner-order-status">Order Status</div>
+                        <div class="header owner-order-time">Order Created At</div>
+                        <div class="header owner-order-totalprice">Order Total Price</div>
+                        <div class="header owner-order-user">Customer</div>
+                    </div>
+                </div>
+                <div class="owner-order-list">
+                    <span id="loadOwnerOrdersHere"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/moment.min.js"></script>
+    <script src="./scripts/owner-orders.js"></script>
+    <!--  -->
+    <div class="fix">
+        <footer>
+            <p>&copy; 2021 homefoods.com </p>
+        </footer>
+    </div>
+</body>
+
+</html>
