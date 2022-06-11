@@ -66,6 +66,15 @@
         </div>
       </div>
       <div class="form-group">
+        <label for="type" class="col-sm-6 control-label">User Type:</label>
+        <div class="col-sm-10">
+          <select name="type" id="type" class="form-control" required="required">
+            <option selected value="Customer">Customer</option>
+            <option value="Owner">Owner</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
         <label for="input" class="col-sm-2 control-label">Password:</label>
         <div class="col-sm-10">
           <input type="password" name="password" id="password" class="form-control" value="" required="required"
@@ -76,8 +85,8 @@
         <div class="col-sm-10 col-sm-offset-2">
           <button type="submit" id="submit" class="btn btn-primary">Register</button>
           <a href="register.html">
-          <button type="button" id="reset" class="btn btn-warning"> Reset</button>
-        </a>
+            <button type="button" id="reset" class="btn btn-warning"> Reset</button>
+          </a>
         </div>
       </div>
     </form>
@@ -91,8 +100,8 @@
         [`${event.target[3].name}`]: event.target[3].value,
         [`${event.target[4].name}`]: event.target[4].value,
         [`${event.target[5].name}`]: event.target[5].value,
+        [`${event.target[6].name}`]: event.target[6].value,
       };
-
       $.ajax({
         type: "POST",
         url: 'http://localhost:8888/user',
@@ -117,4 +126,3 @@
 </body>
 
 </html>
-
