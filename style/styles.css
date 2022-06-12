@@ -30,6 +30,11 @@ body {
     color: green;
 }
 
+.logout {
+    color: green;
+    cursor: pointer;
+}
+
 .navbar-nav li {
     margin-right: 5px;
 }
