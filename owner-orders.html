@@ -14,12 +14,23 @@
     <style>
         .owner-order-list {}
 
-        .owner-order-item-con {
-            display: flex;
+        .owner-order-item {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             margin-bottom: 16px;
+        }
+
+        .owner-order-item-con {
+            display: flex;
             min-height: 35px;
             background-color: azure;
+        }
+
+        .owner-order-item-details {
+            display: flex;
+            background-color: azure;
+        }
+        .detail {
+            padding: 10px;
         }
 
         .header {
@@ -91,12 +102,14 @@
         <div class="col-md-12">
             <div class="t-l">
                 <div class="owner-order-list">
-                    <div class="owner-order-item-con">
-                        <div class="header owner-order-oid">Order ID</div>
-                        <div class="header owner-order-status">Order Status</div>
-                        <div class="header owner-order-time">Order Created At</div>
-                        <div class="header owner-order-totalprice">Order Total Price</div>
-                        <div class="header owner-order-user">Customer</div>
+                    <div class="owner-order-item">
+                        <div class="owner-order-item-con">
+                            <div class="header owner-order-oid">Order ID</div>
+                            <div class="header owner-order-status">Order Status</div>
+                            <div class="header owner-order-time">Order Created At</div>
+                            <div class="header owner-order-totalprice">Order Total Price</div>
+                            <div class="header owner-order-user">Customer</div>
+                        </div>
                     </div>
                 </div>
                 <div class="owner-order-list">

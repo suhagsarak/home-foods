@@ -24,11 +24,11 @@ function login() {
                         localStorage.setItem('email', data[0].email);
                         localStorage.setItem('type', data[0].type);
 
-                        if (data[0].type === 'Owner') {
-                            window.location = "owner-orders.html";
-                        } else {
-                            window.location = "index.html";
-                        }
+                        // if (data[0].type === 'Owner') {
+                        //     window.location = "owner-orders.html";
+                        // } else {
+                        window.location = "index.html";
+                        // }
                         return false;
                     } else {
                         maxTry--;

@@ -42,6 +42,7 @@
             <li class="back-drop"><a href="about.html">About Us</a></li>
             <li class="back-drop" id="registerele"><a href="register.html">Register Here</a></li>
             <li class="back-drop" id="ordersele"><a href="orders.html">Orders</a></li>
+            <li class="back-drop" id="allOrders"><a href="owner-orders.html">All Orders</a></li>
             <li class="back-drop" id='loginele' class="login-btn"><a href="login.html">Log In</a></li>
             <li class="back-drop login-btn logout" id='logoutele' onclick="logout()">Log Out</li>
         </ul>
@@ -115,6 +116,13 @@
             showElement('loginele');
             hideElement('ordersele');
             hideElement('logoutele');
+        }
+        if (isUserOwner()) {
+            hideElement('ordersele');
+            showElement('allOrders');
+        } else {
+            showElement('ordersele');
+            hideElement('allOrders');
         }
     </script>
     <div class="fix">
