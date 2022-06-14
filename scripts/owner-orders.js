@@ -57,12 +57,15 @@ function showDetailsofOrder(order) {
                     </div>
                     <div class="detail customer-details-in-order">
                         <div>Product List</div>
-                        <div>
+                        <div class="product-list-in-order">
                         ${orderDetails.products.map(p => (`
-                            <div>Pid: ${getItemName(p.name)}</div>
+                        <div>
+                            <div>Pid: ${p.pid}</div>
                             <div>Name: ${getItemName(p.name)}</div>
-                            <div>Category: ${getItemName(p.name)}</div>
-                            <div>Price: ${getItemName(p.name)}</div>`)).join('')}
+                            <div>Category: ${p.category}</div>
+                            <div>Price: ${p.price}</div>
+                        </div>`    
+                            )).join('')}
                         </div>
                     </div>
                 </div>`;
